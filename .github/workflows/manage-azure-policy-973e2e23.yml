@@ -1,0 +1,44 @@
+name: manage-azure-policy-973e2e23
+on:
+  workflow_dispatch:
+    inputs:
+      remarks:
+        description: 'Reason for triggering the workflow run'
+        required: false
+        default: 'Updating Azure Policies'
+
+
+## Uncomment the following if you wish to automatically trigger workflow run with every commit
+#
+#  push:
+#    paths:
+#      - 'test/policies/Vulnerability_assessment_should_be_enabled_on_your_Synapse_workspaces_0049a6b3-a662-4f3e-8635-39cf44ace45a/**'
+#      - 'test/policies/Restrict_location_of_information_processing,_storage_and_services_0040d2e5-2779-170d-6a2c-1f5fca353335/**'
+#      - 'test/policies/Establish_parameters_for_searching_secret_authenticators_and_verifiers_0065241c-72e9-3b2c-556f-75de66332a94/**'
+#      - 'test/policies/SQL_Server_Integration_Services_integration_runtimes_on_Azure_Data_Factory_should_be_joined_to_a_virtual_network_0088bc63-6dee-4a9c-9d29-91cfdc848952/**'
+#      - 'test/policies/_Preview_Configure_VMSS_created_with_Shared_Image_Gallery_images_to_install_the_Guest_Attestation_extension_009259b0-12e8-42c9-94e7-7af86aa58d13/**'
+#      - 'test/policies/Configure_App_Service_app_slots_to_use_the_latest_TLS_version_014664e7-e348-41a3-aeb9-566e4ff6a9df/**'
+#      - 'test/policies/Implement_a_threat_awareness_program_015b4935-448a-8684-27c0-d13086356c33/**'
+#      - .github/workflows/manage-azure-policy-973e2e23.yml
+jobs:
+  apply-azure-policy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS_973e2e23}}
+        allow-no-subscriptions: true
+    - name: Create or Update Azure Policies
+      uses: azure/manage-azure-policy@v0
+      with:
+        paths: |
+          test/policies/Vulnerability_assessment_should_be_enabled_on_your_Synapse_workspaces_0049a6b3-a662-4f3e-8635-39cf44ace45a/**
+          test/policies/Restrict_location_of_information_processing,_storage_and_services_0040d2e5-2779-170d-6a2c-1f5fca353335/**
+          test/policies/Establish_parameters_for_searching_secret_authenticators_and_verifiers_0065241c-72e9-3b2c-556f-75de66332a94/**
+          test/policies/SQL_Server_Integration_Services_integration_runtimes_on_Azure_Data_Factory_should_be_joined_to_a_virtual_network_0088bc63-6dee-4a9c-9d29-91cfdc848952/**
+          test/policies/_Preview_Configure_VMSS_created_with_Shared_Image_Gallery_images_to_install_the_Guest_Attestation_extension_009259b0-12e8-42c9-94e7-7af86aa58d13/**
+          test/policies/Configure_App_Service_app_slots_to_use_the_latest_TLS_version_014664e7-e348-41a3-aeb9-566e4ff6a9df/**
+          test/policies/Implement_a_threat_awareness_program_015b4935-448a-8684-27c0-d13086356c33/**
