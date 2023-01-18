@@ -1,0 +1,42 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "identity": {
+  "principalId": "ddde0c3c-8642-45aa-b52b-f8ae75278375",
+  "tenantId": "ba4f9c7e-2c6c-47ad-822e-bad7839d457b",
+  "type": "SystemAssigned"
+ },
+ "properties": {
+  "displayName": "[Preview]: Enable Azure Monitor for VMs with Azure Monitoring Agent(AMA)",
+  "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/9dffaf29-5905-4145-883c-957eb442c226",
+  "scope": "/subscriptions/496ca5aa-3d9d-431f-8fe6-467e5302fe93",
+  "notScopes": [
+   "/subscriptions/496ca5aa-3d9d-431f-8fe6-467e5302fe93/resourceGroups/bdb-testconsultas"
+  ],
+  "parameters": {
+   "logAnalyticsWorkspace": {
+    "value": "/subscriptions/496ca5aa-3d9d-431f-8fe6-467e5302fe93/resourcegroups/bdb-testconsultas/providers/microsoft.operationalinsights/workspaces/law-test-lb"
+   },
+   "bringYourOwnUserAssignedManagedIdentity": {
+    "value": false
+   }
+  },
+  "metadata": {
+   "assignedBy": "Jhon Fredy Mora Sandoval",
+   "parameterScopes": {
+    "logAnalyticsWorkspace": "/subscriptions/496ca5aa-3d9d-431f-8fe6-467e5302fe93"
+   },
+   "createdBy": "24feb026-6030-42bd-9165-168839c8d9a6",
+   "createdOn": "2023-01-18T17:38:47.8328165Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/subscriptions/496ca5aa-3d9d-431f-8fe6-467e5302fe93/providers/Microsoft.Authorization/policyAssignments/ca671885c2af4e54b663569b",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "ca671885c2af4e54b663569b",
+ "location": "eastus"
+}

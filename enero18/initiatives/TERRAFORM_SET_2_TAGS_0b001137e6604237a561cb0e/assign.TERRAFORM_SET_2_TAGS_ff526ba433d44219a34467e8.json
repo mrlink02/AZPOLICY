@@ -1,0 +1,31 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "identity": {
+  "principalId": "8462f206-6380-4bc8-a27f-26217fd7ceba",
+  "tenantId": "ba4f9c7e-2c6c-47ad-822e-bad7839d457b",
+  "type": "SystemAssigned"
+ },
+ "properties": {
+  "displayName": "TERRAFORM SET 2 TAGS",
+  "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/bdbpolicy/providers/Microsoft.Authorization/policySetDefinitions/0b001137e6604237a561cb0e",
+  "scope": "/providers/Microsoft.Management/managementGroups/bdbpolicy",
+  "notScopes": [],
+  "parameters": {},
+  "metadata": {
+   "assignedBy": "Jhon Fredy Mora Sandoval",
+   "parameterScopes": {},
+   "createdBy": "24feb026-6030-42bd-9165-168839c8d9a6",
+   "createdOn": "2023-01-18T17:35:53.6914074Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/bdbpolicy/providers/Microsoft.Authorization/policyAssignments/ff526ba433d44219a34467e8",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "ff526ba433d44219a34467e8",
+ "location": "eastus"
+}

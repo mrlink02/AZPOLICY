@@ -1,0 +1,39 @@
+{
+ "properties": {
+  "displayName": "TERRAFORM SET 2 TAGS",
+  "policyType": "Custom",
+  "metadata": {
+   "createdBy": "24feb026-6030-42bd-9165-168839c8d9a6",
+   "createdOn": "2023-01-18T17:35:22.9193084Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {},
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "TERRAFORM - Inherit a tag from the resource group_1",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/bdbpolicy/providers/Microsoft.Authorization/policyDefinitions/iac_heredar_tag",
+    "parameters": {
+     "tagName": {
+      "value": "ambiente"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "TERRAFORM - Inherit a tag from the resource group_2",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/bdbpolicy/providers/Microsoft.Authorization/policyDefinitions/iac_heredar_tag_2",
+    "parameters": {
+     "tagName": {
+      "value": "text"
+     }
+    },
+    "groupNames": []
+   }
+  ],
+  "policyDefinitionGroups": []
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/bdbpolicy/providers/Microsoft.Authorization/policySetDefinitions/0b001137e6604237a561cb0e",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "0b001137e6604237a561cb0e"
+}
